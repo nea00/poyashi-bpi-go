@@ -51,13 +51,12 @@ func PikaGreatFunction(exScore, maxScore int) float64 {
 	return 0.5 / (1 - scorePercent)
 }
 
+// Inverts the PGF by returning the EXScore necessary to get a given PGF.
 func InversePikaGreatFunction(pgf, maxScore float64) float64 {
 	return (pgf*maxScore - 0.5*maxScore) / pgf
 }
 
-/*
-Returns the EX Score necessary to achieve the provided BPI.
-*/
+// Returns the EX Score necessary to achieve the provided BPI.
 func Inverse(bpi float64, kaidenAverage, worldRecord, maxScore int, powCoef float64) int {
 	powCoefficient := powCoef
 
